@@ -5,6 +5,125 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Geofrey Kieya</title>
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px 0;
+        }
+
+        header nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        header nav ul li a:hover {
+            color: #ff9800;
+        }
+
+        .contact {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .contact h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .contact-details {
+            margin-bottom: 20px;
+        }
+
+        .contact-details p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        .contact-details a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .contact-details a:hover {
+            text-decoration: underline;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        form label {
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        form input,
+        form textarea {
+            padding: 10px;
+            font-size: 14px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            transition: border-color 0.3s ease-in-out;
+        }
+
+        form input:focus,
+        form textarea:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        form button {
+            padding: 12px;
+            background-color: #007bff;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        form button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            margin-top: 30px;
+            border-radius: 10px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -13,6 +132,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="projects.html">Projects</a></li>
+                <li><a href="experience.html">Experience</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
@@ -20,13 +140,22 @@
     
     <section class="contact">
         <h1>Contact Me</h1>
-        <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+        <div class="contact-details">
+            <p><strong>Email:</strong> <a href="mailto:geofreykieya@gmail.com">geofreykieya@gmail.com</a></p>
+            <p><strong>Phone:</strong> <a href="tel:+254758165507">0758165507</a></p>
+            <p><strong>GitHub:</strong> <a href="https://github.com/geofrey9" target="_blank" rel="noopener noreferrer">geofrey9</a></p>
+            <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/geofrey-kieya-476aa2251" target="_blank" rel="noopener noreferrer">Geofrey Kieya</a></p>
+            <p><strong>WhatsApp:</strong> <a href="https://wa.me/254758165507" target="_blank" rel="noopener noreferrer">0758165507</a></p>
+            
+        </div>
+
+        <form action="mailto:geofreykieya@gmail.com" method="post" enctype="text/plain">
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name">
+            <input type="text" id="name" name="name" required>
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email">
+            <input type="email" id="email" name="email" required>
             <label for="message">Message:</label>
-            <textarea id="message" name="message"></textarea>
+            <textarea id="message" name="message" rows="5" required></textarea>
             <button type="submit">Send</button>
         </form>
     </section>
@@ -36,6 +165,7 @@
     </footer>
 </body>
 </html>
+
 
 
 
