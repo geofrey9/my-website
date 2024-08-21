@@ -4,7 +4,115 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog - Geofrey Kieya</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #0073e6;
+            color: #fff;
+            padding: 10px 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #0073e6;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer p a:hover {
+            text-decoration: underline;
+        }
+
+        /* Blog Section */
+        .blog {
+            padding: 60px 20px;
+            background-color: #f9f9f9;
+        }
+
+        .blog h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5em;
+            color: #0073e6;
+        }
+
+        .blog-articles, .blog-updates {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .blog-articles h2, .blog-updates h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #0073e6;
+        }
+
+        .blog-articles article, .blog-updates article {
+            margin-bottom: 20px;
+        }
+
+        .blog-articles h3, .blog-updates h3 {
+            font-size: 1.5em;
+            color: #0073e6;
+        }
+
+        .blog-articles p, .blog-updates p {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+
+        .blog-articles .read-more, .blog-updates .read-more {
+            color: #0073e6;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .blog-articles .read-more:hover, .blog-updates .read-more:hover {
+            color: #20492c;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -80,4 +188,5 @@
     </footer>
 </body>
 </html>
+
 
