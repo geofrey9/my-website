@@ -1,11 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Geofrey Kieya - Personal Portfolio</title>
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        header {
+            background-color: #333;
+            padding: 15px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        header nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        header nav ul li {
+            display: inline;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            color: #f39c12;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(to right, #007bff, #00aaff);
+            color: white;
+            margin-bottom: 50px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+        }
+
+        .hero .btn {
+            padding: 10px 20px;
+            background-color: #f39c12;
+            color: white;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .hero .btn:hover {
+            background-color: #e67e22;
+        }
+
+        /* Skills Section */
+        .skills {
+            text-align: center;
+            margin-bottom: 50px;
+            padding: 0 20px;
+        }
+
+        .skills h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .skills ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .skills ul li {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        /* Featured Projects Section */
+        .featured-projects {
+            max-width: 1200px;
+            margin: 0 auto 50px;
+            padding: 0 20px;
+        }
+
+        .featured-projects h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 40px;
+            color: #333;
+        }
+
+        .project-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 30px;
+        }
+
+        .project-item {
+            flex: 1 1 300px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-item h3 {
+            font-size: 1.8rem;
+            color: #007bff;
+            margin-bottom: 15px;
+        }
+
+        .project-item p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .project-item .btn {
+            padding: 8px 16px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .project-item .btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 40px 20px;
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .testimonials h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        .testimonials p {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            margin-top: 50px;
+            border-radius: 12px;
+        }
+
+        footer a {
+            color: #f39c12;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .skills h2,
+            .featured-projects h2,
+            .testimonials h2 {
+                font-size: 2rem;
+            }
+
+            .project-list {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .project-item {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
+
 <body>
     <header>
         <nav>
@@ -18,7 +243,7 @@
             </ul>
         </nav>
     </header>
-    
+
     <section class="hero">
         <h1>Welcome to My Personal Portfolio</h1>
         <p>I am Geofrey Kieya, a passionate Full Stack Developer specializing in JavaScript and Python.</p>
@@ -61,9 +286,11 @@
     <footer>
         <p>&copy; 2024 Geofrey Kieya. All rights reserved.</p>
         <p>Connect with me on <a href="https://linkedin.com/in/geofrey-kieya-476aa2251" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
-           <a href="https://github.com/geofrey9" target="_blank" rel="noopener noreferrer">GitHub</a></p>
-        
+            <a href="https://github.com/geofrey9" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+
     </footer>
 </body>
+
 </html>
+
 

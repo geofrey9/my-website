@@ -1,11 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me - Geofrey Kieya</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>About Me - GEOFREY KIEYA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #f39c12;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 2rem 0;
+            max-width: 1200px;
+            margin: auto;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            text-align: center;
+        }
+
+        .about img {
+            border-radius: 50%;
+            margin: 20px auto;
+            display: block;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        section h1,
+        section h2 {
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        section p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Skills Section */
+        .skills ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .skills ul li {
+            background-color: #f39c12;
+            color: white;
+            margin: 10px;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            section {
+                padding: 1rem;
+            }
+
+            .skills ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .about img {
+                width: 120px;
+                height: 120px;
+            }
+        }
+    </style>
 </head>
+
 <body>
     <header>
         <nav>
@@ -27,7 +152,7 @@
 
     <section class="professional-background">
         <h2>Professional Background</h2>
-        <p>I have over 1 years of experience in web development, working with various languages and frameworks including JavaScript, Vue.js, Python, and Django. I've contributed to multiple projects, ranging from small startups to larger enterprises.</p>
+        <p>I have over 1 year of experience in web development, working with various languages and frameworks including JavaScript, Vue.js, Python, and Django. I've contributed to multiple projects, ranging from small startups to larger enterprises.</p>
     </section>
 
     <section class="skills">
@@ -55,4 +180,7 @@
         <p>&copy; 2024 Geofrey Kieya. All rights reserved.</p>
     </footer>
 </body>
+
 </html>
+
+
