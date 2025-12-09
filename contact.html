@@ -4,73 +4,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - GEOFREY KIEYA</title>
+
     <style>
+        /* ---------- GLOBAL ---------- */
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
+            background: linear-gradient(135deg, #1e1e2e, #2c3e50);
+            color: #fff;
         }
 
+        /* ---------- NAVIGATION ---------- */
         header {
-            background-color: #333;
+            background: rgba(0, 0, 0, 0.4);
             padding: 15px 0;
-            text-align: center;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(8px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 99;
         }
 
         header nav ul {
             list-style: none;
-            margin: 0;
-            padding: 0;
             display: flex;
             justify-content: center;
-            gap: 30px;
-        }
-
-        header nav ul li {
-            display: inline;
+            gap: 35px;
+            margin: 0;
+            padding: 0;
         }
 
         header nav ul li a {
-            color: white;
-            text-decoration: none;
+            color: #fff;
             font-weight: 600;
-            transition: color 0.3s ease;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 8px;
+            transition: 0.3s ease;
         }
 
         header nav ul li a:hover {
-            color: #f39c12;
+            background: #f39c12;
+            color: #000;
         }
 
-        .contact {
-            max-width: 800px;
-            margin: 50px auto;
-            background-color: #fff;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            padding: 30px;
+        /* ---------- CONTACT CARD ---------- */
+        .contact-container {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 40px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.10);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .contact-container h1 {
+            text-align: center;
+            font-size: 2.4rem;
+            margin-bottom: 25px;
+            color: #f1c40f;
+        }
+
+        /* ---------- CONTACT DETAILS ---------- */
+        .contact-details {
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
             border-radius: 12px;
         }
 
-        .contact h1 {
-            text-align: center;
-            font-size: 2rem;
-            color: #333;
-            margin-bottom: 20px;
-        }
-
-        .contact-details {
-            margin-bottom: 30px;
-            font-size: 1.1rem;
-        }
-
         .contact-details p {
-            margin: 10px 0;
+            margin: 12px 0;
         }
 
         .contact-details a {
-            color: #007bff;
+            color: #f1c40f;
             text-decoration: none;
             font-weight: 500;
         }
@@ -79,118 +96,128 @@
             text-decoration: underline;
         }
 
+        /* ---------- FORM ---------- */
         form {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 18px;
+            margin-top: 20px;
         }
 
         form label {
-            font-size: 1rem;
-            font-weight: bold;
-            margin-bottom: 5px;
+            font-weight: 600;
+            color: #f1c40f;
         }
 
         form input,
         form textarea {
-            padding: 12px;
+            padding: 14px;
+            border-radius: 10px;
+            border: none;
+            background: rgba(255, 255, 255, 0.15);
+            color: #fff;
             font-size: 1rem;
-            border-radius: 8px;
-            border: 1px solid #ddd;
-            transition: border-color 0.3s ease;
-            width: 100%;
+            resize: none;
+            transition: 0.3s ease;
         }
 
         form input:focus,
         form textarea:focus {
-            border-color: #007bff;
-            outline: none;
+            background: rgba(255, 255, 255, 0.25);
+            outline: 2px solid #f1c40f;
         }
 
         form button {
-            padding: 12px;
-            background-color: #007bff;
-            color: white;
-            font-size: 1rem;
+            padding: 14px;
+            background: #f1c40f;
+            color: #000;
+            font-size: 1.1rem;
+            font-weight: 700;
             border: none;
-            border-radius: 8px;
+            border-radius: 10px;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            letter-spacing: 1px;
             text-transform: uppercase;
+            transition: 0.3s ease;
         }
 
         form button:hover {
-            background-color: #0056b3;
+            background: #fff;
+            color: #000;
         }
 
+        /* ---------- FOOTER ---------- */
         footer {
             text-align: center;
-            padding: 20px;
-            background-color: #333;
-            color: white;
-            margin-top: 50px;
-            border-radius: 12px;
-        }
-
-        footer p {
-            margin: 0;
+            padding: 25px;
             font-size: 1rem;
+            background: rgba(0, 0, 0, 0.4);
+            margin-top: 50px;
+            backdrop-filter: blur(8px);
+            color: #eee;
         }
 
+        /* ---------- RESPONSIVE ---------- */
         @media (max-width: 768px) {
-            .contact {
+            .contact-container {
                 margin: 20px;
-                padding: 20px;
+                padding: 25px;
             }
 
             header nav ul {
                 flex-direction: column;
-                gap: 15px;
+                gap: 12px;
+            }
+
+            .contact-container h1 {
+                font-size: 2rem;
             }
         }
     </style>
 </head>
+
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="experience.html">Experience</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section class="contact">
-        <h1>Contact Me</h1>
-        <div class="contact-details">
-            <p><strong>Email:</strong> <a href="mailto:geofreykieya@gmail.com">geofreykieya@gmail.com</a></p>
-            <p><strong>Phone:</strong> <a href="tel:+254758165507">0758165507</a></p>
-            <p><strong>GitHub:</strong> <a href="https://github.com/geofrey9" target="_blank" rel="noopener noreferrer">geofrey9</a></p>
-            <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/geofrey-kieya-476aa2251" target="_blank" rel="noopener noreferrer">Geofrey Kieya</a></p>
-            <p><strong>WhatsApp:</strong> <a href="https://wa.me/254758165507" target="_blank" rel="noopener noreferrer">0758165507</a></p>
-        </div>
 
-        <form action="mailto:geofreykieya@gmail.com" method="post" enctype="text/plain">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-    </section>
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <footer>
-        <p>&copy; 2024 Geofrey Kieya. All rights reserved.</p>
-    </footer>
+<section class="contact-container">
+    <h1>Contact Me</h1>
+
+    <div class="contact-details">
+        <p><strong>Email:</strong> <a href="mailto:geofreykieya@gmail.com">geofreykieya@gmail.com</a></p>
+        <p><strong>Phone:</strong> <a href="tel:+254758165507">0758165507</a></p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/geofrey9" target="_blank">geofrey9</a></p>
+        <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/geofrey-kieya-476aa2251" target="_blank">Geofrey Kieya</a></p>
+        <p><strong>WhatsApp:</strong> <a href="https://wa.me/254758165507" target="_blank">Chat on WhatsApp</a></p>
+    </div>
+
+    <form action="mailto:geofreykieya@gmail.com" method="post" enctype="text/plain">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    <p>&copy; 2024 Geofrey Kieya. All rights reserved.</p>
+</footer>
+
 </body>
 </html>
-
-
-
-
-
